@@ -60,7 +60,7 @@ module.exports = {
   entry: "./src/index.js",
 
   output: {
-    publicPath: 'https://60c6cf8d1270e411f982adeb--brave-einstein-63f1db.netlify.app/'
+    publicPath: 'https://showroom-app.netlify.app/'
     // output path is required for `clean-webpack-plugin`
     // path: path.resolve(__dirname, "dist"),
     // this places all images processed in an image folder
@@ -139,7 +139,6 @@ module.exports = {
   // required if using webpack-dev-server
   devServer: {
     contentBase: "./",
-    port: 4001,
     historyApiFallback: true, 
     hot: true,   // hot reloading
   },
