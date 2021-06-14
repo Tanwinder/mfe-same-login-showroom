@@ -60,7 +60,7 @@ module.exports = {
   entry: "./src/index.js",
 
   output: {
-    publicPath: 'http://localhost:4001/'
+    publicPath: 'https://60c6cf8d1270e411f982adeb--brave-einstein-63f1db.netlify.app/'
     // output path is required for `clean-webpack-plugin`
     // path: path.resolve(__dirname, "dist"),
     // this places all images processed in an image folder
