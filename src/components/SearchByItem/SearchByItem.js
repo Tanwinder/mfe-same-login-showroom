@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Jumbotron, Container, Input } from 'reactstrap';
 import './searchbyitem.scss'
 import {useDispatch, useSelector} from 'react-redux'
-import {callList} from './SearchByItemAction'
+import {callList, AddToCart} from './SearchByItemAction'
 import SearchContainer from './SearchContainer'
 
 const SearchByItem = () => {
@@ -21,6 +21,9 @@ const SearchByItem = () => {
         //     setinputVal(event.target.value);
         // }
       }
+    const onClickAddToCart = (item) => {
+        console.log('AddToCart')
+    }
     return(
         <div className="searchbyitem">
             <Jumbotron fluid>
@@ -29,7 +32,7 @@ const SearchByItem = () => {
                     placeholder="search by city name" 
                     type="text" 
                     onKeyUp={onChangeInput} />
-                    <SearchContainer items={items || []}/>
+                    <SearchContainer items={items || []} onClickAddToCart={onClickAddToCart}/>
                 </Container>
             </Jumbotron>
            
