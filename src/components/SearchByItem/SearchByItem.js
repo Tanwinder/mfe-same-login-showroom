@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { Jumbotron, Container, Input } from 'reactstrap';
 import './searchbyitem.scss'
 import {useDispatch, useSelector} from 'react-redux'
-import {callList, AddToCart} from './SearchByItemAction'
+import {callList} from './SearchByItemAction'
 import SearchContainer from './SearchContainer'
+import { ADDTOCART } from '../../actions/actionTypes'
 
 const SearchByItem = () => {
     const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const SearchByItem = () => {
         // }
       }
     const onClickAddToCart = (item) => {
+        dispatch({type:ADDTOCART, item})
         console.log('AddToCart')
     }
     return(

@@ -140,6 +140,7 @@ module.exports = {
   // required if using webpack-dev-server
   devServer: {
     contentBase: "./",
+    port: 4001,
     historyApiFallback: true, 
     hot: true,   // hot reloading
   },
